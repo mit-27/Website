@@ -30,15 +30,15 @@ class index extends React.Component{
         var tl = new TimelineLite();
 
         tl.to(".wall",0,{visibility:'visible'})
-        .from(".mypic",1,{y:-500,opacity:0,ease:Power3.easeOut})
+        .from(".mypic",.5,{y:-500,opacity:0,ease:Power3.easeOut})
         // .staggerFrom(titles,0.3,{y:-20,opacity:0,ease:Back.easeOut},0.02)
-        .from(".mt-lp",0.8,{opacity:0,y:-100,ease:Back.easeOut})
+        .from(".mt-lp",0.5,{opacity:0,y:-100,ease:Back.easeOut})
         .staggerFrom(taglines,0.3, {scale:4, opacity:0,transformOrigin:"100% 50%", ease:Back.easeOut},0.0150)
         // .from(captions,{duration: 0.5, opacity:0, force3D:true,scale:0.5,  ease:Back.easeOut, stagger: 0.01}, "+=0")
         // .staggerFrom(captions,0.3, {scale:3, autoAlpha:0,  rotationX:-180,  transformOrigin:"50% 50%", ease:Back.easeOut},0.05)
 
         .from(".knowmebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut})
-        .from(".resumebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut});
+        .from(".resumebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.5");
 
         ;
 

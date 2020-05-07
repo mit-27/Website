@@ -39,10 +39,10 @@ const About = () => {
     //    gsap.set(pabout,{perspective:400});
         var tl = new TimelineLite();
         tl.to(dim,0,{visibility:'visible'})
-        .from(im,1,{y:-500,opacity:0,ease:Power3.easeOut})
-        .from(about,.6,{opacity:0,y:100,ease:Power3.easeOut})
-        .from(button,.6,{opacity:0,y:100,ease:Power3.easeOut},"-=0.4")
-        .staggerFrom(chars, 0.3, {scale:4, autoAlpha:0,  rotationX:-180,  transformOrigin:"100% 50%", ease:Back.easeOut},0.015);
+        .from(im,.8,{y:-500,opacity:0,ease:Power3.easeOut})
+        .from(about,.5,{opacity:0,y:100,ease:Power3.easeOut})
+        .from(button,.5,{opacity:0,y:100,ease:Power3.easeOut},"-=0.4")
+        .staggerFrom(chars, 0.2, {scale:4, autoAlpha:0,  rotationX:-180,  transformOrigin:"100% 50%", ease:Back.easeOut},0.010);
                
     })
 

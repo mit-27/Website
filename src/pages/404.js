@@ -3,13 +3,13 @@ import SectionTitle from "../components/sectiontitle";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const notFound = () => (
+const NotFound = () => (
     <Layout>
         <SEO title="404: Not found" />
         <section id="404" className="container" style={{ minHeight: "600px" }}>
             <div className="section-title">
                 <SectionTitle title="404" />
-                <p class="text-primary">
+                <p className="text-primary">
                     The page you are looking for doesn't exist, or has been
                     removed.
                 </p>
@@ -18,4 +18,4 @@ const notFound = () => (
     </Layout>
 );
 
-export default notFound;
+export default NotFound;
