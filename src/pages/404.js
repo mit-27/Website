@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../components/sectiontitle";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import SEO from "../components/seo";
 import {document} from "browser-monads";
 
