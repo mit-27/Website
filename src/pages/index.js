@@ -9,6 +9,7 @@ import {TimelineLite,Power3,Back} from "gsap";
 import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
+import {document} from "browser-monads";
 
 
 class index extends React.Component{

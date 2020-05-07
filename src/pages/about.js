@@ -1,11 +1,13 @@
 import React,{useEffect,useRef} from "react";
 import Layout from '../components/Layout';
-import gsap,{TimelineLite,Power3,Back} from "gsap";
+import {TimelineLite,Power3,Back} from "gsap";
 import "../style/about.less";
 import {graphql,useStaticQuery} from "gatsby";
 import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 import SEO from "../components/seo";
+import {document} from "browser-monads";
+
 
 import "splitting/dist/splitting-cells.css";
 

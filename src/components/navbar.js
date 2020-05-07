@@ -5,6 +5,7 @@ import NavLinks from "./navlinks";
 import Logo from "./logo";
 import SocialLinks from "./sociallinks";
 import { Hamburger } from "./icons";
+import {document,window} from "browser-monads";
 
 import "../style/navbar.less";
 

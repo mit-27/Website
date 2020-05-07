@@ -2,6 +2,8 @@ import React from "react";
 import SectionTitle from "../components/sectiontitle";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import {document} from "browser-monads";
+
 
 const NotFound = () => (
     <Layout>

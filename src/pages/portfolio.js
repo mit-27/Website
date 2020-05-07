@@ -7,6 +7,7 @@ import ScrollMagic from "scrollmagic";
 import $ from "jquery";
 import {ScrollMagicPluginGsap} from "scrollmagic-plugin-gsap";
 ScrollMagicPluginGsap(ScrollMagic,TweenLite,TimelineLite);
+import {window,document} from "browser-monads";
 
 const Portfolio = () => {
 

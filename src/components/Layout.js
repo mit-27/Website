@@ -2,6 +2,7 @@ import React from "react";
 import Head from "./head";
 import Navbar from "./navbar";
 import Footer from "./Footer";
+import {document} from "browser-monads";
 const Layout = ({ placeholder, children }) => {
 
  

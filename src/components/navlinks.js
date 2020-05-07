@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby";
 import Link from "./link";
 import { Location } from "@reach/router";
 import { Sun, Moon } from "./icons";
+import {document} from "browser-monads";
+
 
 function ListItem(props) {
     const data = props.data;

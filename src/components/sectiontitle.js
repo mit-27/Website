@@ -1,4 +1,5 @@
 import React from "react";
+import {window,document} from "browser-monads";
 
 class SectionTitle extends React.Component {
     constructor(props) {
