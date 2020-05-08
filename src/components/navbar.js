@@ -2,10 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import Sidebar from "react-sidebar";
 import NavLinks from "./navlinks";
-import Logo from "./logo";
 import SocialLinks from "./sociallinks";
 import { Hamburger } from "./icons";
-import {document,window} from "browser-monads";
 
 import "../style/navbar.less";
 
@@ -49,7 +47,12 @@ class Navbar extends React.Component {
     }
 
     componentDidMount() {
-        this.changeNavbarPlaceholderHeight();
+        
+        
+            this.changeNavbarPlaceholderHeight();
+            this.changeNavbarHeight();
+
+        
 
         // let logo = this.nav.querySelector(".logo"),
         //     _this = this;
@@ -58,7 +61,6 @@ class Navbar extends React.Component {
         //     _this.changeNavbarPlaceholderHeight();
         // });
 
-        this.changeNavbarHeight();
     }
 
     changeNavbarHeight() {

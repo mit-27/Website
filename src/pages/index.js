@@ -1,15 +1,15 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import SEO from "../components/seo";
-import {graphql} from "gatsby";
-import {PortfolioComponent} from "./portfolio";
+import {graphql,Link} from "gatsby";
 import SocialLinks from "../components/sociallinks";
 import '../style/wall.less';
-import {TimelineLite,Power3,Back} from "gsap";
-import Splitting from "splitting";
+import About from "../components/about"
+// import {TimelineLite,Power3,Back} from "gsap";
+// import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
-import {document} from "browser-monads";
+import Portfolio from '../components/portfolio';
 
 
 class index extends React.Component{
@@ -20,6 +20,11 @@ class index extends React.Component{
 
     componentDidMount()
     {
+        var gsap = require('gsap');
+        var TimelineLite = gsap.TimelineLite;
+        var Power3 = gsap.Power3;
+        var Back = gsap.Back;
+        var Splitting = require('splitting');
         // var splittitle = Splitting({target:".mt-lp",by:"chars"});
         var splittagline = Splitting({ target:".tag-line",by:"chars"});
         // var splitcaption = Splitting({target:".caption",by:"chars"});
@@ -31,7 +36,7 @@ class index extends React.Component{
         var tl = new TimelineLite();
 
         tl.to(".wall",0,{visibility:'visible'})
-        .from(".mypic",.5,{y:-500,opacity:0,ease:Power3.easeOut})
+        .from(".mypic",1,{y:-500,opacity:0,ease:Power3.easeOut})
         // .staggerFrom(titles,0.3,{y:-20,opacity:0,ease:Back.easeOut},0.02)
         .from(".mt-lp",0.5,{opacity:0,y:-100,ease:Back.easeOut})
         .staggerFrom(taglines,0.3, {scale:4, opacity:0,transformOrigin:"100% 50%", ease:Back.easeOut},0.0150)
@@ -75,9 +80,15 @@ class index extends React.Component{
                         </a>
                         </div> */}
                         <div className="grpbtn">
-                        <a href="/about" style={{margin:"5px 20px"}}  className="col-md-6 col-sm-12 btn knowmebtn">
-                            Know Me 
-                        </a>
+
+
+
+                        <Link to="/about/">
+                        <div style={{margin:"5px 20px"}}  className="col-md-6 col-sm-12 btn knowmebtn">
+                        Know Me 
+                        </div>
+                        </Link>
+                       
                         <a href="https://drive.google.com/file/d/1PLq8cnF7v9qwDMGrWQoYPc-Gr9mIU5QW/view?usp=sharing" rel="noopener noreferrer" target="_blank" style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn resumebtn">
                             Download Resume
                         </a>
@@ -88,7 +99,8 @@ class index extends React.Component{
                         <SocialLinks />
                     </div>
                 </div>
-                    <PortfolioComponent/>
+                <About/>
+                <Portfolio/>
             </Layout>
     
         );

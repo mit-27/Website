@@ -143,6 +143,8 @@ module.exports = {
         options: {
           name: `Mit Suthar`,
           short_name: `Mit Suthar`,
+          background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
           start_url: `/`,
           
           display: `standalone`,
@@ -159,6 +161,7 @@ module.exports = {
             options: {
               // Setting a color is optional.
               color: `blue`,
+              
               // Disable the loading spinner.
               showSpinner: true,
             },
