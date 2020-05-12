@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import SEO from "../components/seo";
-import {graphql,Link} from "gatsby";
+import {graphql} from "gatsby";
 import SocialLinks from "../components/sociallinks";
 import '../style/wall.less';
 import About from "../components/about"
@@ -10,6 +10,11 @@ import About from "../components/about"
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Portfolio from '../components/portfolio';
+import $ from "jquery"
+import { Waypoint } from 'react-waypoint'
+
+
+// import {Link,Element} from "react-scroll"
 
 
 class index extends React.Component{
@@ -20,11 +25,30 @@ class index extends React.Component{
 
     componentDidMount()
     {
+        
+
+
+
         var gsap = require('gsap');
         var TimelineLite = gsap.TimelineLite;
+        var TweenLite = gsap.TweenLite;
         var Power3 = gsap.Power3;
         var Back = gsap.Back;
+        var ScrollMagic = require('scrollmagic');
+        var smp = require('scrollmagic-plugin-gsap');
         var Splitting = require('splitting');
+        var ScrollMagicPluginGsap = smp.ScrollMagicPluginGsap;
+        ScrollMagicPluginGsap(ScrollMagic,TweenLite,TimelineLite);
+        var controller = new ScrollMagic.Controller();
+
+
+
+
+
+
+
+
+
         // var splittitle = Splitting({target:".mt-lp",by:"chars"});
         var splittagline = Splitting({ target:".tag-line",by:"chars"});
         // var splitcaption = Splitting({target:".caption",by:"chars"});
@@ -34,8 +58,10 @@ class index extends React.Component{
         // var captions = splitcaption[0].chars;
 
         var tl = new TimelineLite();
+        var t3 = new TimelineLite();
 
-        tl.to(".wall",0,{visibility:'visible'})
+
+        tl.to(".wall",0.5,{visibility:'visible'})
         .from(".mypic",1,{y:-500,opacity:0,ease:Power3.easeOut})
         // .staggerFrom(titles,0.3,{y:-20,opacity:0,ease:Back.easeOut},0.02)
         .from(".mt-lp",0.5,{opacity:0,y:-100,ease:Back.easeOut})
@@ -46,7 +72,51 @@ class index extends React.Component{
         .from(".knowmebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut})
         .from(".resumebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.5");
 
-        ;
+
+        var splitaboutp = Splitting({ target:"#pabout",by:"chars"});
+        var chars = splitaboutp[0].chars;
+    //    console.log(splitaboutp);
+    //    gsap.set(pabout,{perspective:400});
+        var t2 = new TimelineLite();
+        t2.to(".imgcontainer",0,{visibility:'visible'})
+        .from(".abouth",1,{opacity:0,y:100,ease:Power3.easeOut})
+        .staggerFrom(chars, 0.3, {scale:4, autoAlpha:0,  rotationX:-180,  transformOrigin:"100% 50%", ease:Back.easeOut},0.010);
+
+
+
+        new ScrollMagic.Scene({
+            triggerElement: ".abouth"
+          })
+            .setTween(t2)
+            .reverse(false)
+            .triggerHook(0.8)
+                  .addTo(controller);
+
+        
+
+                  if($(window).width()<768)
+                  {
+                      t3.from(".prjtitle",0.8,{opacity:0,y:100,ease:Power3.easeOut})
+                      .from("#proj1",.8,{opacity:0,ease:Power3.easeOut})
+                      .from("#proj2",.8,{opacity:0,ease:Power3.easeOut})
+                      .from("#proj3",.8,{opacity:0,ease:Power3.easeOut})
+                      .from("#proj4",.8,{opacity:0,ease:Power3.easeOut});
+                  }
+                  else
+                  {
+                      t3.from(".prjtitle",0.8,{opacity:0,y:100,ease:Power3.easeOut})
+                      .from("#proj1",.8,{opacity:0,x:150,ease:Power3.easeOut})
+                      .from("#proj2",.8,{opacity:0,x:-150,ease:Power3.easeOut})
+                      .from("#proj3",.8,{opacity:0,x:150,ease:Power3.easeOut})
+                      .from("#proj4",.8,{opacity:0,x:-150,ease:Power3.easeOut});
+                  }
+                  new ScrollMagic.Scene({
+                      triggerElement: "#proj1"
+                    })
+                      .setTween(t3)
+                      .reverse(false)
+                      .triggerHook(0.8)
+                            .addTo(controller);
 
     }
 
@@ -55,7 +125,8 @@ class index extends React.Component{
     {
         return(
             <Layout placeholder={true}>
-                            
+                <Waypoint/>
+                            <div id="home"></div>
                 <SEO lang="en" title={this.props.data.site.siteMetadata.title} />
                     <div className="wall">
                     <div className="intro container">
@@ -66,6 +137,7 @@ class index extends React.Component{
                         <p className="tag-line text-secondary">
                             {this.props.data.site.siteMetadata.introTag}
                         </p>
+
                         {/* <p className="caption details">
                             {this.props.data.site.siteMetadata.description}
                         </p> */}
@@ -79,28 +151,36 @@ class index extends React.Component{
                             Know Me
                         </a>
                         </div> */}
-                        <div className="grpbtn">
+                        
 
 
 
-                        <Link to="/about/">
-                        <div style={{margin:"5px 20px"}}  className="col-md-6 col-sm-12 btn knowmebtn">
-                        Know Me 
-                        </div>
-                        </Link>
+                        
                        
                         <a href="https://drive.google.com/file/d/1PLq8cnF7v9qwDMGrWQoYPc-Gr9mIU5QW/view?usp=sharing" rel="noopener noreferrer" target="_blank" style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn resumebtn">
                             Download Resume
                         </a>
-                        </div>
+
+                        
+                        
                        
                     </div>
                     <div className="social-buttons">
                         <SocialLinks />
                     </div>
                 </div>
+                <section id="about">
+                
                 <About/>
+                </section>
+
+                
+                <section id="project">
+                
+
                 <Portfolio/>
+                </section>
+                
             </Layout>
     
         );

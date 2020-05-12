@@ -1,8 +1,12 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Link from "./link";
+// import {Link} from "react-scroll";
 import { Location } from "@reach/router";
 import { Sun, Moon } from "./icons";
+// import Scrollspy from "react-scrollspy"
+// import ScrollspyNav from "react-scrollspy-nav";
+import Scrollspy from 'react-scrollspy'
+import Scroll from "./Scroll";
 
 
 function ListItem(props) {
@@ -13,25 +17,32 @@ function ListItem(props) {
     };
     return (
         <Location>
-            {({ location }) => {
+             {({ location }) => {
                 return (
                     <li>
-                        <Link
+                        <Scroll type="id" element={data.url}>
+    <a href="#">{data.name}</a>
+                </Scroll>
+                        {/* <a href={data.url}><span>{data.name}</span></a> */}
+                        {/* <Link
                             to={data.url}
-                            {...anchorAttrs}
-                            className={
-                                "/" + location.pathname.split("/")[1] ===
-                                data.url
-                                    ? "active"
-                                    : ""
-                            }
+                            smooth={true}
+                            activeClass="active"
+                            className="active"
+                            // {...anchorAttrs}
+                            // className={
+                            //     location.pathname.split("/")[1] ===
+                            //     data.url
+                            //         ? "active"
+                            //         : ""
+                            // }
                         >
                             <span>{data.name}</span>
-                        </Link>
+                        </Link> */}
                     </li>
                 );
             }}
-        </Location>
+         </Location>
     );
 }
 
@@ -131,6 +142,7 @@ export default function() {
     let list = [];
 
     items.forEach(function(e, i) {
+        
         list.push(<ListItem key={e.url + "-" + i} data={e} />);
     });
 
@@ -143,5 +155,16 @@ export default function() {
         );
     }
 
-    return <ul className="navbar-links">{list}</ul>;
+    return(
+        <Scrollspy
+                    items={["home", "about", "project"]}
+                    
+                    currentClassName="active"
+                    
+                    
+                    
+                >
+                <ul className="navbar-links">{list}</ul>
+            </Scrollspy>
+    ) ;
 }

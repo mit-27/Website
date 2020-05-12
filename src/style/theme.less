@@ -15,6 +15,10 @@
 	padding: 0;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 .details{
 	color: black;
 }
@@ -138,10 +142,15 @@ nav{
 	background-image: linear-gradient(to left,@colorPrimary,@colorSecondary) !important;
 	color: #fff !important;
 	border: none !important;
+	transition: padding .2s ease-out !important;
 
 	&.disabled{
 		opacity: .7;
 	}
+}
+
+.btn:hover{
+    padding: 0 40px !important;
 }
 
 
@@ -384,6 +393,9 @@ div[role="navigation"]{
 }
 
 @media only screen and (max-width: 768px) {
+	html{
+		scroll-behavior: initial;
+	}
     .mypic{
         width: 200px;
         height: 200px;

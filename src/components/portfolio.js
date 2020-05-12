@@ -6,7 +6,7 @@ import "../style/portfolio.less";
 // import ScrollMagic from "scrollmagic";
 import $ from "jquery";
 // import {ScrollMagicPluginGsap} from "scrollmagic-plugin-gsap";
-
+import {Element} from "react-scroll"
 // const Portfolio = () => {
 
 
@@ -137,53 +137,33 @@ import $ from "jquery";
 
 const Portfolio = () => {
 
-    useEffect(() => {
-        var gsap = require('gsap');
-        var TimelineLite = gsap.TimelineLite;
-        var TweenLite = gsap.TweenLite;
-        var Power3 = gsap.Power3;
-        var ScrollMagic = require('scrollmagic');
-        var t1 = new TimelineLite();
-        var smp = require('scrollmagic-plugin-gsap');
-        var ScrollMagicPluginGsap = smp.ScrollMagicPluginGsap;
-        ScrollMagicPluginGsap(ScrollMagic,TweenLite,TimelineLite);
+    // useEffect(() => {
+    //     var gsap = require('gsap');
+    //     var TimelineLite = gsap.TimelineLite;
+    //     var TweenLite = gsap.TweenLite;
+    //     var Power3 = gsap.Power3;
+    //     var ScrollMagic = require('scrollmagic');
+    //     var t1 = new TimelineLite();
+    //     var smp = require('scrollmagic-plugin-gsap');
+    //     var ScrollMagicPluginGsap = smp.ScrollMagicPluginGsap;
+    //     ScrollMagicPluginGsap(ScrollMagic,TweenLite,TimelineLite);
 
 
-        var controller = new ScrollMagic.Controller();
+    //     var controller = new ScrollMagic.Controller();
 
         
-            if($(window).width()<768)
-            {
-                t1.from(".prjtitle",0.8,{opacity:0,y:100,ease:Power3.easeOut})
-                .from("#proj1",.8,{opacity:0,ease:Power3.easeOut})
-                .from("#proj2",.8,{opacity:0,ease:Power3.easeOut})
-                .from("#proj3",.8,{opacity:0,ease:Power3.easeOut})
-                .from("#proj4",.8,{opacity:0,ease:Power3.easeOut});
-            }
-            else
-            {
-                t1.from(".prjtitle",0.8,{opacity:0,y:100,ease:Power3.easeOut})
-                .from("#proj1",.8,{opacity:0,x:150,ease:Power3.easeOut})
-                .from("#proj2",.8,{opacity:0,x:-150,ease:Power3.easeOut})
-                .from("#proj3",.8,{opacity:0,x:150,ease:Power3.easeOut})
-                .from("#proj4",.8,{opacity:0,x:-150,ease:Power3.easeOut});
-            }
-            new ScrollMagic.Scene({
-                triggerElement: "#proj1"
-              })
-                .setTween(t1)
-                .reverse(false)
-                .triggerHook(0.8)
-                      .addTo(controller);
+            
     
         
         
        
-                })
+    //             })
 
     return (
 
-        <div className="container-fluid portfolio">
+        
+        <div className="container-fluid portfolio" >
+            
             <h3 className="prjtitle grd-title">Projects</h3>
         <div className="oddmainsection container-fluid" id="proj1" >
                     <h3>Recruitment Process Management</h3>
@@ -272,7 +252,7 @@ const Portfolio = () => {
 
                 </div>
 
-           
+                
         </div>
         
     );

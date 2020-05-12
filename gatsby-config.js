@@ -20,15 +20,15 @@ const siteMetadata = {
   navLinks: [
       {
           name: "Home",
-          url: "/"
+          url: "home"
       },
       {
           name: "About",
-          url: "/about"
+          url: "about"
       },
       {
           name: "Projects",
-          url: "/portfolio"
+          url: "project"
       }
       
   ],

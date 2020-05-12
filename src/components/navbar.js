@@ -4,16 +4,16 @@ import Sidebar from "react-sidebar";
 import NavLinks from "./navlinks";
 import SocialLinks from "./sociallinks";
 import { Hamburger } from "./icons";
-
+import {animateScroll as scroll} from "react-scroll";
 import "../style/navbar.less";
 
 function SidebarContents() {
     return (
         <div className="sidebar-contents">
             <div className="logo">
-                <Link to="/">
-                <h5 className="nav-name">Mit Suthar</h5>
-                </Link>
+                
+                <h5 className="nav-name" onClick={() => scroll.scrollToTop()}>Mit Suthar</h5>
+                
             </div>
             <div className="links text-secondary">
                 <NavLinks />
@@ -118,9 +118,16 @@ class Navbar extends React.Component {
                             <Hamburger />
                         </span>
                     </a>
-                    <Link to="/">
-                        <h5 className="nav-name">Mit Suthar</h5>
-                    </Link>
+                   <div>
+                       
+                       <h5 className="nav-name" onClick={() => scroll.scrollToTop()} style={{cursor:"pointer"}}>Mit Suthar</h5>
+
+                       
+
+                    
+
+                   </div>
+                    
                     <NavLinks />
                 </nav>
                 {placeholder && (
