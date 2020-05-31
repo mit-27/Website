@@ -21,11 +21,48 @@ nav {
 		}
 	}
 
+	
+
 	img {
 		width: 46px;
 		height: auto;
 		align-items: center;
 		transition: width 0.25s;
+	}
+
+	ul{
+		li.is-active{
+			a {
+				margin: 0 10px;
+				position: relative;
+
+				&:before {
+					content: "";
+					position: absolute;
+					width: 36px;
+					height: 36px;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%,-50%) scale(1);
+					border-radius: 50%;
+					opacity: 0.2;
+					transition: transform 0.25s;
+				}
+
+				
+
+				// &.active:before,
+				// &:focus:before,
+				// &:hover:before {
+				// 	transform: translate(-50%,-50%) scale(1);
+				// }
+
+				span {
+					position: relative;
+					z-index: 2;
+				}
+			}
+		}
 	}
 
 	&.scrolled {
@@ -34,6 +71,12 @@ nav {
 		img {
 			width: 34px;
 		}
+
+		// ul{
+		// 	list-style: none;
+
+		
+		
 	}
 
 	ul {
@@ -42,6 +85,8 @@ nav {
 		li {
 			display: inline-block;
 			vertical-align: middle;
+
+			
 
 			a {
 				margin: 0 10px;
@@ -60,8 +105,8 @@ nav {
 					transition: transform 0.25s;
 				}
 
-				&.active:before,
-				&:focus:before,
+				
+				
 				&:hover:before {
 					transform: translate(-50%,-50%) scale(1);
 				}
@@ -97,7 +142,12 @@ nav {
 					}
 				}
 			}
+
+			
+			
 		}
+
+		
 	}
 }
 
@@ -106,6 +156,12 @@ nav {
 	min-width: 45%;
 	max-width: 75%;
 
+	
+		
+		
+
+	
+
 	.sidebar-contents{
 		text-align: center;
 		display: flex;
@@ -113,6 +169,10 @@ nav {
 		height: 100%;
 		justify-content: space-between;
 		align-items: center;
+
+		
+			
+		
 
 		.switch-theme{
 			display: inline-block;
@@ -160,7 +220,17 @@ nav {
 
 				li{
 					margin: 20px 0;
+
+					&.side-active{
+						a span{
+							color: tomato;
+							
+						}
+					}
+					
 				}
+
+				
 			}
 		}
 

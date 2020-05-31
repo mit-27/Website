@@ -60,24 +60,28 @@ const About = () => {
 
     
     return(
+        <div id="about">
         <div className="aboutsection" >
             
 
 
             {/* <SEO lang="en" title="About" /> */}
            <div className="container imgcontainer">
-               
+           
+                
                <h2   className="abouth grd-title">About Me</h2>
                
 
                <div className="info details" id="pabout"  >
                {data.site.siteMetadata.aboutme}
                </div>
-            
+              
            </div>
         
 
            </div> 
+           </div>
+
         
 
     );

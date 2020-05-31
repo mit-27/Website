@@ -126,7 +126,7 @@ class index extends React.Component{
         return(
             <Layout placeholder={true}>
                 <Waypoint/>
-                            <div id="home"></div>
+                            <div id="home">
                 <SEO lang="en" title={this.props.data.site.siteMetadata.title} />
                     <div className="wall">
                     <div className="intro container">
@@ -169,17 +169,15 @@ class index extends React.Component{
                         <SocialLinks />
                     </div>
                 </div>
-                <section id="about">
+                </div>
                 
                 <About/>
-                </section>
-
-                
-                <section id="project">
                 
 
+                
+                <div id="project">
                 <Portfolio/>
-                </section>
+                </div>
                 
             </Layout>
     

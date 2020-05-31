@@ -1,29 +1,57 @@
 import React from "react";
 import { Link } from "gatsby";
 import Sidebar from "react-sidebar";
-import NavLinks from "./navlinks";
+import ThemeSwitchButton from "./navlinks";
 import SocialLinks from "./sociallinks";
 import { Hamburger } from "./icons";
 import {animateScroll as scroll} from "react-scroll";
 import "../style/navbar.less";
+import Scrollspy from 'react-scrollspy'
+import Scroll from "./Scroll";
 
-function SidebarContents() {
-    return (
-        <div className="sidebar-contents">
-            <div className="logo">
+// function SidebarContents() {
+//     return (
+//         <div className="sidebar-contents">
+//             <div className="logo">
                 
-                <h5 className="nav-name" onClick={() => scroll.scrollToTop()}>Mit Suthar</h5>
+//                 <h5 className="nav-name" onClick={() => scroll.scrollToTop()}>Mit Suthar</h5>
                 
-            </div>
-            <div className="links text-secondary">
-                <NavLinks />
-            </div>
-            <div className="social-links">
-                <SocialLinks />
-            </div>
-        </div>
-    );
-}
+//             </div>
+//             <div className="links text-secondary">
+//                 {/* <NavLinks /> */}
+//                 <ul className="navbar-links">
+//                    <Scrollspy
+//                     items={['home', 'about', 'project']}      
+//                     currentClassName="is-active"  
+//                 >
+
+//                     <li onClick={this.onSetSidebarClose}>
+//                         <Scroll type="id" element="home">
+//                         <a href="#" > <span>Home</span></a>
+//                         </Scroll>
+//                     </li>
+
+//                     <li>
+//                         <Scroll type="id" element="about">
+//                         <a href="#"><span>About</span></a>
+//                         </Scroll>
+//                     </li>
+//                     <li>
+//                         <Scroll type="id" element="project">
+//                         <a href="#"><span>Project</span></a>
+//                         </Scroll>
+//                     </li>
+                    
+
+//                 </Scrollspy>
+//                    </ul>
+//             </div>
+//             <div className="social-links">
+//                 <SocialLinks />
+//             </div>
+//         </div>
+//     );
+// }
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -35,10 +63,17 @@ class Navbar extends React.Component {
 
         this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
         this.menuOpen = this.menuOpen.bind(this);
+        this.onSetSidebarClose = this.onSetSidebarClose.bind(this);
     }
 
     onSetSidebarOpen(open) {
         this.setState({ sidebarOpen: open });
+    }
+
+    onSetSidebarClose(event) {
+        event.preventDefault();
+        this.onSetSidebarOpen(false);
+        
     }
 
     menuOpen(event) {
@@ -92,7 +127,56 @@ class Navbar extends React.Component {
         return (
             <React.Fragment>
                 <Sidebar
-                    sidebar={<SidebarContents />}
+                    sidebar={(
+                        <div className="sidebar-contents">
+            <div className="logo">
+                
+                <h5 className="nav-name text-secondary" onClick={() => scroll.scrollToTop()}>Mit Suthar</h5>
+                
+            </div>
+            <div className="links text-secondary">
+                {/* <NavLinks /> */}
+                <ul className="navbar-links">
+                   <Scrollspy
+                    items={['home', 'about', 'project']}      
+                    currentClassName="side-active"  
+                >
+
+                    <li onClick={this.onSetSidebarClose}>
+                        <Scroll type="id" element="home">
+                        <a href="#" > <span>Home</span></a>
+                        </Scroll>
+                    </li>
+
+                    <li onClick={this.onSetSidebarClose}>
+                        <Scroll type="id" element="about">
+                        <a href="#"><span>About</span></a>
+                        </Scroll>
+                    </li>
+                    <li onClick={this.onSetSidebarClose}>
+                        <Scroll type="id" element="project">
+                        <a href="#"><span>Project</span></a>
+                        </Scroll>
+                    </li>
+                    <ThemeSwitchButton
+                key="themeswitcher"
+                darkmode={true}
+                 />
+                    
+
+                </Scrollspy>
+                
+                   </ul>
+            </div>
+            <div className="social-links">
+                <SocialLinks />
+            </div>
+        </div>
+                    )}
+
+
+
+
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
                     sidebarClassName="sidebar-content"
@@ -127,8 +211,37 @@ class Navbar extends React.Component {
                     
 
                    </div>
+                    {/* <NavLinks/> */}
+                   <ul className="navbar-links">
+                   <Scrollspy
+                    items={['home', 'about', 'project']}      
+                    currentClassName="is-active"  
+                >
+
+                    <li>
+                        <Scroll type="id" element="home">
+                        <a href="#"> <span>Home</span></a>
+                        </Scroll>
+                    </li>
+
+                    <li>
+                        <Scroll type="id" element="about">
+                        <a href="#"><span>About</span></a>
+                        </Scroll>
+                    </li>
+                    <li>
+                        <Scroll type="id" element="project">
+                        <a href="#"><span>Project</span></a>
+                        </Scroll>
+                    </li>
+                    <ThemeSwitchButton
+                key="themeswitcher"
+                darkmode={true}
+                 />
                     
-                    <NavLinks />
+
+                </Scrollspy>
+                   </ul>
                 </nav>
                 {placeholder && (
                     <div

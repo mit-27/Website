@@ -32,9 +32,7 @@ export default function() {
                     </div>
 
                 </div>
-                <div className="navlinks text-secondary">
-                    <Navlinks />
-                </div>
+                
                 {/* <div
                     className="navlinks text-secondary"
                     style={{ marginTop: "20px" }}

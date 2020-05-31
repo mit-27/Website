@@ -1,50 +1,50 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+// import { useStaticQuery, graphql } from "gatsby";
 // import {Link} from "react-scroll";
-import { Location } from "@reach/router";
+// import { Location } from "@reach/router";
 import { Sun, Moon } from "./icons";
 // import Scrollspy from "react-scrollspy"
 // import ScrollspyNav from "react-scrollspy-nav";
-import Scrollspy from 'react-scrollspy'
-import Scroll from "./Scroll";
+// import Scrollspy from 'react-scrollspy'
+// import Scroll from "./Scroll";
 
 
-function ListItem(props) {
-    const data = props.data;
-    let anchorAttrs = {
-        href: data.url,
-        title: data.name
-    };
-    return (
-        <Location>
-             {({ location }) => {
-                return (
-                    <li>
-                        <Scroll type="id" element={data.url}>
-    <a href="#">{data.name}</a>
-                </Scroll>
-                        {/* <a href={data.url}><span>{data.name}</span></a> */}
-                        {/* <Link
-                            to={data.url}
-                            smooth={true}
-                            activeClass="active"
-                            className="active"
-                            // {...anchorAttrs}
-                            // className={
-                            //     location.pathname.split("/")[1] ===
-                            //     data.url
-                            //         ? "active"
-                            //         : ""
-                            // }
-                        >
-                            <span>{data.name}</span>
-                        </Link> */}
-                    </li>
-                );
-            }}
-         </Location>
-    );
-}
+// function ListItem(props) {
+//     const data = props.data;
+//     let anchorAttrs = {
+//         href: data.url,
+//         title: data.name
+//     };
+//     return (
+//         <Location>
+//              {({ location }) => {
+//                 return (
+//                     <li>
+//                         <Scroll type="id" element={data.url}>
+//     <a href="#"><span>{data.name}</span></a>
+//                 </Scroll>
+//                         {/* <a href={data.url}><span>{data.name}</span></a> */}
+//                         {/* <Link
+//                             to={data.url}
+//                             smooth={true}
+//                             activeClass="active"
+//                             className="active"
+//                             // {...anchorAttrs}
+//                             // className={
+//                             //     location.pathname.split("/")[1] ===
+//                             //     data.url
+//                             //         ? "active"
+//                             //         : ""
+//                             // }
+//                         >
+//                             <span>{data.name}</span>
+//                         </Link> */}
+//                     </li>
+//                 );
+//             }}
+//          </Location>
+//     );
+// }
 
 class ThemeSwitchButton extends React.Component {
     constructor(props) {
@@ -123,48 +123,52 @@ class ThemeSwitchButton extends React.Component {
     }
 }
 
-export default function() {
-    const data = useStaticQuery(graphql`
-        query NavbarLinkQuery {
-            site {
-                siteMetadata {
-                    navLinks {
-                        name
-                        url
-                    }
-                    darkmode
-                    switchTheme
-                }
-            }
-        }
-    `);
-    const items = data.site.siteMetadata.navLinks;
-    let list = [];
+// const themeswitcher = () => {
+//     // const data = useStaticQuery(graphql`
+//     //     query NavbarLinkQuery {
+//     //         site {
+//     //             siteMetadata {
+//     //                 navLinks {
+//     //                     name
+//     //                     url
+//     //                 }
+//     //                 darkmode
+//     //                 switchTheme
+//     //             }
+//     //         }
+//     //     }
+//     // `);
+//     // const items = data.site.siteMetadata.navLinks;
+//     // let list = [];
 
-    items.forEach(function(e, i) {
+//     // items.forEach(function(e, i) {
         
-        list.push(<ListItem key={e.url + "-" + i} data={e} />);
-    });
+//     //     list.push(<ListItem key={e.url + "-" + i} data={e} />);
+//     // });
 
-    if (data.site.siteMetadata.switchTheme) {
-        list.push(
-            <ThemeSwitchButton
-                key="themeswitcher"
-                darkmode={data.site.siteMetadata.darkmode}
-            />
-        );
-    }
+//     // if (data.site.siteMetadata.switchTheme) {
+//     //     list.push(
+            
+//     //     );
+//     // }
 
-    return(
-        <Scrollspy
-                    items={["home", "about", "project"]}
+//     return(
+        
+//         <ThemeSwitchButton
+//                 key="themeswitcher"
+//                 darkmode={true}
+//             />
+//         // <Scrollspy
+//         //             items={['home', 'about', 'project']}
                     
-                    currentClassName="active"
+//         //             currentClassName="active"
                     
                     
                     
-                >
-                <ul className="navbar-links">{list}</ul>
-            </Scrollspy>
-    ) ;
-}
+//         //         >
+//         //         <ul className="navbar-links">{list}</ul>
+//         //     </Scrollspy>
+//     ) ;
+// }
+
+export default ThemeSwitchButton
