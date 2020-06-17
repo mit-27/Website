@@ -11,6 +11,7 @@ import "splitting/dist/splitting-cells.css";
 
 
 
+
 const About = () => {
 
     // useEffect(()=> {
@@ -61,6 +62,7 @@ const About = () => {
     
     return(
         <div id="about">
+
         <div className="aboutsection" >
             
 
@@ -75,11 +77,21 @@ const About = () => {
                <div className="info details" id="pabout"  >
                {data.site.siteMetadata.aboutme}
                </div>
+
+               
               
            </div>
+           <div className="container" style={{paddingLeft:"15px"}}>
+           <a href="https://drive.google.com/file/d/1PLq8cnF7v9qwDMGrWQoYPc-Gr9mIU5QW/view?usp=sharing" rel="noopener noreferrer" target="_blank" style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn resumebtn">
+                            Get Resume
+                        </a>
+           </div>
+           
         
 
            </div> 
+          
+
            </div>
 
         

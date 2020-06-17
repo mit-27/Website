@@ -5,6 +5,7 @@
 @textNormal: #333;
 @colorPrimary: @textSecondary;
 @colorSecondary: #F55555;
+@sideactive : #F55555;
 @colorError : #F55555;
 @colorSuccess : #4CAF50;
 @fontBold: 'Work Sans', sans-serif;
@@ -18,6 +19,17 @@
 // html{
 // 	scroll-behavior: smooth;
 // }
+
+#pbg{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-image: url('');
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
 
 .details{
 	color: black;
@@ -291,6 +303,7 @@ nav ul li a:before{
 	@colorSecondary: #F55555;
 	@colorError : #F55555;
 	@colorSuccess : #4CAF50;
+	@sideactive : @textSecondary;
 
 
 	&{

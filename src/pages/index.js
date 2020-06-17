@@ -12,6 +12,9 @@ import "splitting/dist/splitting-cells.css";
 import Portfolio from '../components/portfolio';
 import $ from "jquery"
 import { Waypoint } from 'react-waypoint'
+// import ParticlesBg from 'particles-bg'
+import Scroll from "../components/Scroll";
+
 
 
 // import {Link,Element} from "react-scroll"
@@ -69,7 +72,7 @@ class index extends React.Component{
         // .from(captions,{duration: 0.5, opacity:0, force3D:true,scale:0.5,  ease:Back.easeOut, stagger: 0.01}, "+=0")
         // .staggerFrom(captions,0.3, {scale:3, autoAlpha:0,  rotationX:-180,  transformOrigin:"50% 50%", ease:Back.easeOut},0.05)
 
-        .from(".knowmebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut})
+        // .from(".knowmebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut})
         .from(".resumebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.5");
 
 
@@ -123,10 +126,28 @@ class index extends React.Component{
    
     render()
     {
+        let config = {
+            num: [4, 7],
+            rps: 0.1,
+            radius: [5, 40],
+            life: [1.5, 3],
+            v: [1, 3],
+            tha: [-40, 40],
+            alpha: [0.6,0 ],
+            scale: [.1, 0.4],
+            position: "all",
+            color: ["#535C68"],
+            cross: "dead",
+            // emitter: "follow",
+            random: 15
+          };
         return(
             <Layout placeholder={true}>
                 <Waypoint/>
-                            <div id="home">
+                <div id="home">
+                    {/* <div id="pbg">
+                    <ParticlesBg type="custom" color="#171B27" config={config} bg={true} />
+                    </div> */}
                 <SEO lang="en" title={this.props.data.site.siteMetadata.title} />
                     <div className="wall">
                     <div className="intro container">
@@ -156,10 +177,12 @@ class index extends React.Component{
 
 
                         
-                       
-                        <a href="https://drive.google.com/file/d/1PLq8cnF7v9qwDMGrWQoYPc-Gr9mIU5QW/view?usp=sharing" rel="noopener noreferrer" target="_blank" style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn resumebtn">
-                            Download Resume
+                        <Scroll type="id" element="project">
+                        <a href="#"  style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn resumebtn">
+                            See Works
                         </a>
+                        </Scroll>
+                        
 
                         
                         
@@ -175,9 +198,12 @@ class index extends React.Component{
                 
 
                 
-                <div id="project">
+                
                 <Portfolio/>
-                </div>
+
+                
+
+
                 
             </Layout>
     

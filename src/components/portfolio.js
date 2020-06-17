@@ -1,12 +1,13 @@
-import React,{useEffect} from "react"
+import React from "react"
 // import Layout from '../components/Layout';
 // import SEO from "../components/seo";
 import "../style/portfolio.less";
+
 // import {TimelineLite,TweenLite,Power3} from "gsap";
 // import ScrollMagic from "scrollmagic";
-import $ from "jquery";
+// import $ from "jquery";
 // import {ScrollMagicPluginGsap} from "scrollmagic-plugin-gsap";
-import {Element} from "react-scroll"
+// import {Element} from "react-scroll"
 // const Portfolio = () => {
 
 
@@ -163,32 +164,10 @@ const Portfolio = () => {
 
         
         <div className="container-fluid portfolio" >
-            
+            <div id="project">
             <h3 className="prjtitle grd-title">Projects</h3>
         <div className="oddmainsection container-fluid" id="proj1" >
-                    <h3>Recruitment Process Management</h3>
-                    <p>
-                    Recruiter Process Management project is developed to make the recruitment process advance by providing a web-portal to the recruiter. Collecting the candidate’s information to scheduling an interview of that candidate and taking the status to selection - done as easily as possible. Recruiter can manage all candidate which he/she have entered. After adding the candidate, he/she can schedule that candidate’s interview which can be updatable, after interview give the different rounds of interview as a status which provides easy to access. Overall all the phases of recruitment would achieve by this project.
-                    </p>
-                    <div className="spans">
-                    
-                        <span>Codeigniter Framework</span>
-                        <span>PHP</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Bootstrap</span>
-                        <span>Javascript</span>
-                        <span>Ajax</span>
-                        
-                    </div>
-                    <a href="https://github.com/meetu-27/Recruitment-Process-Management" rel="noopener noreferrer" target="_blank" className="gitbtn">View On Github   <i className="fab fa-github"></i></a>
-
-                </div>
-            
-
-            
-                <div className="evenmainsection container-fluid" id="proj2" >
-                    <h3>Digi Paper</h3>
+            <h3>Cryptos</h3>
                     <p>
                         It is a android application is developed for CNC Eduserve Pvt. Lmt.
                         Digi Paper is an android app that has two modules. One is Teacher module and other is Student
@@ -205,10 +184,32 @@ const Portfolio = () => {
                     
                         <span>Android</span>
                         <span>Java</span>
-                        <span>Firebase</span>
+                        <span>Data Structure & Algorithm</span>
                         
                     </div>
-                    {/* <a href="#" className="gitbtn">View On Github   <i className="fab fa-github"></i></a> */}
+                    <a href="#" className="gitbtn playstorebtn">Download from Playstore <i class="fab fa-google-play"></i></a>
+
+                </div>
+            
+
+            
+                <div className="evenmainsection container-fluid" id="proj2" >
+                <h3>Recruitment Process Management</h3>
+                    <p>
+                    Recruiter Process Management project is developed to make the recruitment process advance by providing a web-portal to the recruiter. Collecting the candidate’s information to scheduling an interview of that candidate and taking the status to selection - done as easily as possible. Recruiter can manage all candidate which he/she have entered. After adding the candidate, he/she can schedule that candidate’s interview which can be updatable, after interview give the different rounds of interview as a status which provides easy to access. Overall all the phases of recruitment would achieve by this project.
+                    </p>
+                    <div className="spans">
+                    
+                        <span>Codeigniter Framework</span>
+                        <span>PHP</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                        <span>Javascript</span>
+                        <span>Ajax</span>
+                        
+                    </div>
+                    <a href="https://github.com/meetu-27/Recruitment-Process-Management" rel="noopener noreferrer" target="_blank" className="gitbtn">View On Github   <i className="fab fa-github"></i></a>
 
                 </div>
 
@@ -252,7 +253,7 @@ const Portfolio = () => {
 
                 </div>
 
-                
+                </div>
         </div>
         
     );

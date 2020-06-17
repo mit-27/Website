@@ -126,30 +126,30 @@ const siteMetadata = {
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
-    {
-        resolve: `gatsby-plugin-google-analytics`,
-          options: {
-             trackingId: "UA-146457377-1",
-      },
-    },
+    // {
+    //     resolve: `gatsby-plugin-google-analytics`,
+    //       options: {
+    //          trackingId: "UA-146457377-1",
+    //   },
+    // },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-offline`,
-    {
-        resolve: `gatsby-plugin-manifest`,
-        options: {
-          name: `Mit Suthar`,
-          short_name: `Mit Suthar`,
-          background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
-          start_url: `/`,
+    // `gatsby-plugin-offline`,
+    // {
+    //     resolve: `gatsby-plugin-manifest`,
+    //     options: {
+    //       name: `Mit Suthar`,
+    //       short_name: `Mit Suthar`,
+    //       background_color: `#f7f0eb`,
+    //     theme_color: `#a2466c`,
+    //       start_url: `/`,
           
-          display: `standalone`,
-        },
-      },
+    //       display: `standalone`,
+    //     },
+    //   },
     {
             resolve: `gatsby-plugin-less`,
             options: {
