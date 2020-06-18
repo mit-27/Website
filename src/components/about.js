@@ -82,7 +82,7 @@ const About = () => {
               
            </div>
            <div className="container" style={{paddingLeft:"15px"}}>
-           <a href="https://drive.google.com/file/d/1PLq8cnF7v9qwDMGrWQoYPc-Gr9mIU5QW/view?usp=sharing" rel="noopener noreferrer" target="_blank" style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn resumebtn">
+           <a href="https://drive.google.com/file/d/1Of-6Lgj_YlzDOQzuTifJXjV5LFcCPsVV/view?usp=sharing" rel="noopener noreferrer" target="_blank" style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn resumebtn">
                             Get Resume
                         </a>
            </div>

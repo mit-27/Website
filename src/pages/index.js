@@ -73,7 +73,7 @@ class index extends React.Component{
         // .staggerFrom(captions,0.3, {scale:3, autoAlpha:0,  rotationX:-180,  transformOrigin:"50% 50%", ease:Back.easeOut},0.05)
 
         // .from(".knowmebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut})
-        .from(".resumebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.5");
+        .from(".workbtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.5");
 
 
         var splitaboutp = Splitting({ target:"#pabout",by:"chars"});
@@ -83,7 +83,8 @@ class index extends React.Component{
         var t2 = new TimelineLite();
         t2.to(".imgcontainer",0,{visibility:'visible'})
         .from(".abouth",1,{opacity:0,y:100,ease:Power3.easeOut})
-        .staggerFrom(chars, 0.3, {scale:4, autoAlpha:0,  rotationX:-180,  transformOrigin:"100% 50%", ease:Back.easeOut},0.010);
+        .staggerFrom(chars, 0.3, {scale:4, autoAlpha:0,  rotationX:-180,  transformOrigin:"100% 50%", ease:Back.easeOut},0.010)
+        .from(".resumebtn",0.8,{opacity:0,y:-100,ease:Power3.easeOut});
 
 
 
@@ -179,7 +180,7 @@ class index extends React.Component{
 
                         
                         <Scroll type="id" element="project">
-                        <a href="#"  style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn resumebtn">
+                        <a href="#"  style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn workbtn">
                             See Works
                         </a>
                         </Scroll>
