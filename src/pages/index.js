@@ -31,7 +31,7 @@ class index extends React.Component{
         
 
 
-
+        var ParticlesBg = require('particles-bg')
         var gsap = require('gsap');
         var TimelineLite = gsap.TimelineLite;
         var TweenLite = gsap.TweenLite;
@@ -145,6 +145,7 @@ class index extends React.Component{
             <Layout placeholder={true}>
                 <Waypoint/>
                 <div id="home">
+                    
                     {/* <div id="pbg">
                     <ParticlesBg type="custom" color="#171B27" config={config} bg={true} />
                     </div> */}
