@@ -125,6 +125,7 @@ const siteMetadata = {
 
 module.exports = {
   siteMetadata: siteMetadata,
+  pathPrefix: "/master",
   plugins: [
     // {
     //     resolve: `gatsby-plugin-google-analytics`,
