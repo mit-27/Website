@@ -69,6 +69,7 @@ const siteMetadata = {
           url: "mailto:meetsuthar64@gmail.com"
       }
   ],
+};
   
 
 module.exports = {
