@@ -69,59 +69,7 @@ const siteMetadata = {
           url: "mailto:meetsuthar64@gmail.com"
       }
   ],
-  // contact: {
-  //     /* Leave the below value completely empty (no space either) if you don't want a contact form. */
-  //     api_url: "./test.json",
-  //     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-  //     mail: "hi@akzhy.com",
-  //     phone: "000-000-0000",
-  //     address: "1234 \nLocation \nLocation"
-  // }
-  // this is optional. you can uncomment this if you use disqus
-  // disqus: `your-disqus-shortname`
-};
-
-// const plugins = [
-//   `gatsby-plugin-sharp`,
-//   `gatsby-transformer-sharp`,
-//   `gatsby-plugin-react-helmet`,
-//   {
-//       resolve: `gatsby-transformer-remark`,
-//       options: {
-//           plugins: [
-//               "gatsby-remark-copy-linked-files",
-//               {
-//                   resolve: `gatsby-remark-images`,
-//                   options: {
-//                       maxWidth: 1280
-//                   }
-//               }
-//           ]
-//       }
-//   },
-//   {
-//       resolve: `gatsby-source-filesystem`,
-//       options: {
-//           name: `contents`,
-//           path: `${__dirname}/contents/`
-//       }
-//   },
-//   {
-//       resolve: `gatsby-plugin-less`,
-//       options: {
-//           strictMath: true
-//       }
-//   },
-// ]
-
-// if(siteMetadata.disqus) {
-//   plugins.push({
-//       resolve: `gatsby-plugin-disqus`,
-//       options: {
-//         shortname: siteMetadata.disqus
-//       }
-//   })
-// }
+  
 
 module.exports = {
   siteMetadata: siteMetadata,
@@ -137,9 +85,10 @@ module.exports = {
         options: {
           // Setting a color is optional.
           color: `blue`,
-          minimum: 0.5,
-          // Disable the loading spinner.
           showSpinner: true,
+          trickleSpeed: 20,
+          easing: 'ease',
+          speed: 100
         },
       },
     `gatsby-plugin-netlify`,
@@ -147,19 +96,6 @@ module.exports = {
     
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    // `gatsby-plugin-offline`,
-    // {
-    //     resolve: `gatsby-plugin-manifest`,
-    //     options: {
-    //       name: `Mit Suthar`,
-    //       short_name: `Mit Suthar`,
-    //       background_color: `#f7f0eb`,
-    //     theme_color: `#a2466c`,
-    //       start_url: `/`,
-          
-    //       display: `standalone`,
-    //     },
-    //   },
     {
             resolve: `gatsby-plugin-less`,
             options: {

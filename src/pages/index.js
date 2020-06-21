@@ -11,7 +11,7 @@ import Portfolio from '../components/portfolio';
 import $ from "jquery"
 import { Waypoint } from 'react-waypoint'
 import Scroll from "../components/Scroll";
-import Particles from 'react-particles-js';
+
 
 
 
@@ -40,8 +40,11 @@ class index extends React.Component{
         var ScrollMagicPluginGsap = smp.ScrollMagicPluginGsap;
         ScrollMagicPluginGsap(ScrollMagic,TweenLite,TimelineLite);
         var controller = new ScrollMagic.Controller();
-
-
+        var splitaboutp = Splitting({ target:"#pabout",by:"chars"});
+        var chars = splitaboutp[0].chars;
+        var tl = new TimelineLite();
+        var t3 = new TimelineLite();
+        var t2 = new TimelineLite();
 
 
 
@@ -57,33 +60,41 @@ class index extends React.Component{
         // var titles = splittitle[0].chars;
         // var captions = splitcaption[0].chars;
 
-        var tl = new TimelineLite();
-        var t3 = new TimelineLite();
+      
 
 
-        tl.to(".wall",0.5,{visibility:'visible'})
-        .from(".mypic",1,{y:-500,opacity:0,ease:Power3.easeOut})
+        tl.to(".wall",0.5,{visibility:'visible',delay:1})
+        .from(".mypic",1,{y:-500,autoAlpha:0,ease:Power3.easeOut})
         // .staggerFrom(titles,0.3,{y:-20,opacity:0,ease:Back.easeOut},0.02)
-        .from(".mt-lp",0.5,{opacity:0,y:-100,ease:Back.easeOut})
-        .staggerFrom(taglines,0.3, {scale:4, opacity:0,transformOrigin:"100% 50%", ease:Back.easeOut},0.0150)
-        // .from(captions,{duration: 0.5, opacity:0, force3D:true,scale:0.5,  ease:Back.easeOut, stagger: 0.01}, "+=0")
-        // .staggerFrom(captions,0.3, {scale:3, autoAlpha:0,  rotationX:-180,  transformOrigin:"50% 50%", ease:Back.easeOut},0.05)
-
-        // .from(".knowmebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut})
-        .from(".workbtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.2");
-        // .to("#pbg",1,{opacity:1,ease:Power3.easeOut});
+        .from(".mt-lp",0.5,{autoAlpha:0,y:-100,ease:Back.easeOut})
+        .staggerFrom(taglines,0.3, {scale:4, autoAlpha:0,transformOrigin:"100% 50%", ease:Back.easeOut},0.0150)
+        .from(".workbtn",0.5,{autoAlpha:0,y:-100,ease:Power3.easeOut},"=-0.2");
+        
 
 
-        var splitaboutp = Splitting({ target:"#pabout",by:"chars"});
-        var chars = splitaboutp[0].chars;
-    //    console.log(splitaboutp);
-    //    gsap.set(pabout,{perspective:400});
-        var t2 = new TimelineLite();
-        t2.to(".imgcontainer",0,{visibility:'visible'})
-        .from(".abouth",1,{opacity:0,y:100,ease:Power3.easeOut})
+        
+    
+        t2.to(".imgcontainer",0,{visibility:'visible',delay:1})
+        .from(".abouth",1,{autoAlpha:0,y:100,ease:Power3.easeOut})
         .staggerFrom(chars, 0.3, {scale:4, autoAlpha:0,  rotationX:-180,  transformOrigin:"100% 50%", ease:Back.easeOut},0.010)
-        .from(".resumebtn",0.8,{opacity:0,y:-100,ease:Power3.easeOut});
+        .from(".resumebtn",0.8,{autoAlpha:0,y:-100,ease:Power3.easeOut});
 
+        if($(window).width()<768)
+                  {
+                      t3.from(".prjtitle",0.8,{autoAlpha:0,y:100,ease:Power3.easeOut})
+                      .from("#proj1",.8,{autoAlpha:0,ease:Power3.easeOut})
+                      .from("#proj2",.8,{autoAlpha:0,ease:Power3.easeOut})
+                      .from("#proj3",.8,{autoAlpha:0,ease:Power3.easeOut})
+                      .from("#proj4",.8,{autoAlpha:0,ease:Power3.easeOut});
+                  }
+                  else
+                  {
+                      t3.from(".prjtitle",0.8,{autoAlpha:0,y:100,ease:Power3.easeOut})
+                      .from("#proj1",.8,{autoAlpha:0,x:150,ease:Power3.easeOut})
+                      .from("#proj2",.8,{autoAlpha:0,x:-150,ease:Power3.easeOut})
+                      .from("#proj3",.8,{autoAlpha:0,x:150,ease:Power3.easeOut})
+                      .from("#proj4",.8,{autoAlpha:0,x:-150,ease:Power3.easeOut});
+                  }
 
 
         new ScrollMagic.Scene({
@@ -94,25 +105,8 @@ class index extends React.Component{
             .triggerHook(0.8)
                   .addTo(controller);
 
-        
-
-                  if($(window).width()<768)
-                  {
-                      t3.from(".prjtitle",0.8,{opacity:0,y:100,ease:Power3.easeOut})
-                      .from("#proj1",.8,{opacity:0,ease:Power3.easeOut})
-                      .from("#proj2",.8,{opacity:0,ease:Power3.easeOut})
-                      .from("#proj3",.8,{opacity:0,ease:Power3.easeOut})
-                      .from("#proj4",.8,{opacity:0,ease:Power3.easeOut});
-                  }
-                  else
-                  {
-                      t3.from(".prjtitle",0.8,{opacity:0,y:100,ease:Power3.easeOut})
-                      .from("#proj1",.8,{opacity:0,x:150,ease:Power3.easeOut})
-                      .from("#proj2",.8,{opacity:0,x:-150,ease:Power3.easeOut})
-                      .from("#proj3",.8,{opacity:0,x:150,ease:Power3.easeOut})
-                      .from("#proj4",.8,{opacity:0,x:-150,ease:Power3.easeOut});
-                  }
-                  new ScrollMagic.Scene({
+                  
+         new ScrollMagic.Scene({
                       triggerElement: "#proj1"
                     })
                       .setTween(t3)
