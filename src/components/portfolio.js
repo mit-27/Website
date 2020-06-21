@@ -169,15 +169,8 @@ const Portfolio = () => {
         <div className="oddmainsection container-fluid" id="proj1" >
             <h3>Cryptos</h3>
                     <p>
-                        It is a android application is developed for CNC Eduserve Pvt. Lmt.
-                        Digi Paper is an android app that has two modules. One is Teacher module and other is Student
-                        module. In Teacher module, teacher can upload MCQ questions having different difficulty level
-                        and theoretical Question bank having different weightage of marks. To take the theoretical exam,
-                        Teacher can generate Question Paper in which questions are randomly selected based on marks
-                        weightage and based on chosen level of difficulty of exam and save the generated Question Paper
-                        as PDF. While in Student module, student can practice MCQ questions and get the result after
-                        completing MCQ exam. Also, student can practice theoretical Question Paper by generating
-                        randomly generated Question Paper.
+                    It is an android application that helps you to learn, understand and practice various cryptography algorithms like symmetric cryptography (Traditional and modern), asymmetric cryptography, and other basic mathematical functionality
+(prime numbers, primitive roots, etc..).This app provide you with step by step execution of all cryptographic algorithms. Additional functionality of this app is it allows you to download pdf of the particular algorithm for the future references.
 
                     </p>
                     <div className="spans">

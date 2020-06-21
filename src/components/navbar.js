@@ -140,6 +140,8 @@ class Navbar extends React.Component {
                    <Scrollspy
                     items={['home', 'about', 'project']}      
                     currentClassName="side-active"  
+                    offset={-200}
+
                 >
 
                     <li onClick={this.onSetSidebarClose}>
@@ -216,6 +218,7 @@ class Navbar extends React.Component {
                    <Scrollspy
                     items={['home', 'about', 'project']}      
                     currentClassName="is-active"  
+                    offset={-200}
                 >
 
                     <li>

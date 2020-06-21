@@ -5,15 +5,13 @@ import {graphql} from "gatsby";
 import SocialLinks from "../components/sociallinks";
 import '../style/wall.less';
 import About from "../components/about"
-// import {TimelineLite,Power3,Back} from "gsap";
-// import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Portfolio from '../components/portfolio';
 import $ from "jquery"
 import { Waypoint } from 'react-waypoint'
-// import ParticlesBg from 'particles-bg'
 import Scroll from "../components/Scroll";
+import Particles from 'react-particles-js';
 
 
 
@@ -31,7 +29,6 @@ class index extends React.Component{
         
 
 
-        var ParticlesBg = require('particles-bg')
         var gsap = require('gsap');
         var TimelineLite = gsap.TimelineLite;
         var TweenLite = gsap.TweenLite;
@@ -73,7 +70,8 @@ class index extends React.Component{
         // .staggerFrom(captions,0.3, {scale:3, autoAlpha:0,  rotationX:-180,  transformOrigin:"50% 50%", ease:Back.easeOut},0.05)
 
         // .from(".knowmebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut})
-        .from(".workbtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.5");
+        .from(".workbtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.2")
+        .to("#pbg",1,{opacity:1,ease:Power3.easeOut});
 
 
         var splitaboutp = Splitting({ target:"#pabout",by:"chars"});
@@ -127,29 +125,75 @@ class index extends React.Component{
    
     render()
     {
-        let config = {
-            num: [4, 7],
-            rps: 0.1,
-            radius: [5, 40],
-            life: [1.5, 3],
-            v: [1, 3],
-            tha: [-40, 40],
-            alpha: [0.6,0 ],
-            scale: [.1, 0.4],
-            position: "all",
-            color: ["#535C68"],
-            cross: "dead",
-            // emitter: "follow",
-            random: 15
-          };
+        
+
+          
+          
+
         return(
             <Layout placeholder={true}>
                 <Waypoint/>
-                <div id="home">
-                    
-                    {/* <div id="pbg">
-                    <ParticlesBg type="custom" color="#171B27" config={config} bg={true} />
-                    </div> */}
+                <div id="home">  
+                <div id="pbg">
+                <Particles
+    params={{
+	    "particles": {
+	        "number": {
+	            "value": 60,
+	            "density": {
+	                "enable": false
+	            }
+	        },
+	        "size": {
+	            "value": 10,
+	            "random": true,
+	            "anim": {
+	                "speed": 4,
+	                "size_min": 0.3
+	            }
+            },
+            "color":"#535c68",
+	        "line_linked": {
+	            "enable": false
+	        },
+	        "move": {
+	            "random": true,
+	            "speed": 1,
+	            "direction": "top",
+	            "out_mode": "out"
+	        }
+	    },
+	    "interactivity": {
+	        "events": {
+	            "onhover": {
+	                "enable": true,
+	                "mode": "bubble"
+	            },
+	            "onclick": {
+	                "enable": true,
+	                "mode": "repulse"
+	            }
+	        },
+	        "modes": {
+	            "bubble": {
+	                "distance": 250,
+	                "duration": 2,
+	                "size": 0,
+	                "opacity": 0
+	            },
+	            "repulse": {
+	                "distance": 400,
+	                "duration": 4
+	            }
+	        }
+	    }
+	}} />
+
+
+
+
+
+                    </div>  
                 <SEO lang="en" title={this.props.data.site.siteMetadata.title} />
                     <div className="wall">
                     <div className="intro container">
@@ -195,8 +239,10 @@ class index extends React.Component{
                     </div>
                 </div>
                 </div>
+
                 
                 <About/>
+                
                 
 
                 
