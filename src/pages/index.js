@@ -63,23 +63,30 @@ class index extends React.Component{
       
 
 
-        tl.to(".wall",0.5,{visibility:'visible'})
-        .from(".mypic",1,{y:-500,autoAlpha:0,ease:Power3.easeOut})
-        .from(".mt-lp",0.5,{autoAlpha:0,y:-100,ease:Back.easeOut})
-        .staggerFrom(taglines,0.3, {scale:4, autoAlpha:0,transformOrigin:"100% 50%", ease:Back.easeOut},0.0150)
-        .from(".workbtn",0.5,{autoAlpha:0,y:-100,ease:Power3.easeOut},"=-0.2");
+        
         
 
 
         
     
-        t2.to(".imgcontainer",0,{visibility:'visible'})
-        .from(".abouth",1,{autoAlpha:0,y:100,ease:Power3.easeOut})
-        .staggerFrom(chars, 0.3, {scale:4, autoAlpha:0,  rotationX:-180,  transformOrigin:"100% 50%", ease:Back.easeOut},0.010)
-        .from(".resumebtn",0.8,{autoAlpha:0,y:-100,ease:Power3.easeOut});
+        
 
         if($(window).width()<768)
                   {
+
+                    tl.to(".wall",0.5,{visibility:'visible'})
+                    .from(".mypic",1,{y:-500,autoAlpha:0,ease:Power3.easeOut})
+                    .from(".mt-lp",0.5,{autoAlpha:0,y:-100,ease:Back.easeOut})
+                    .from(".tag-line",0.3, {scale:4, autoAlpha:0,transformOrigin:"100% 50%", ease:Back.easeOut})
+                    .from(".workbtn",0.5,{autoAlpha:0,y:-100,ease:Power3.easeOut},"=-0.2");
+
+                    t2.to(".imgcontainer",0,{visibility:'visible'})
+        .from(".abouth",1,{autoAlpha:0,y:100,ease:Power3.easeOut})
+        .from("#pabout",1, {scale:4, autoAlpha:0,y:100, ease:Power3.easeOut})
+        .from(".resumebtn",0.8,{autoAlpha:0,y:-100,ease:Power3.easeOut});
+
+
+
                       t3.from(".prjtitle",0.8,{autoAlpha:0,y:100,ease:Power3.easeOut})
                       .from("#proj1",.8,{autoAlpha:0,ease:Power3.easeOut})
                       .from("#proj2",.8,{autoAlpha:0,ease:Power3.easeOut})
@@ -88,6 +95,18 @@ class index extends React.Component{
                   }
                   else
                   {
+                    tl.to(".wall",0.5,{visibility:'visible'})
+                    .from(".mypic",1,{y:-500,autoAlpha:0,ease:Power3.easeOut})
+                    .from(".mt-lp",0.5,{autoAlpha:0,y:-100,ease:Back.easeOut})
+                    .staggerFrom(taglines,0.3, {scale:4, autoAlpha:0,transformOrigin:"100% 50%", ease:Back.easeOut},0.0150)
+                    .from(".workbtn",0.5,{autoAlpha:0,y:-100,ease:Power3.easeOut},"=-0.2");
+
+                    t2.to(".imgcontainer",0,{visibility:'visible'})
+        .from(".abouth",1,{autoAlpha:0,y:100,ease:Power3.easeOut})
+        .staggerFrom(chars, 0.3, {scale:4, autoAlpha:0,  rotationX:-180,  transformOrigin:"100% 50%", ease:Back.easeOut},0.010)
+        .from(".resumebtn",0.8,{autoAlpha:0,y:-100,ease:Power3.easeOut});
+
+
                       t3.from(".prjtitle",0.8,{autoAlpha:0,y:100,ease:Power3.easeOut})
                       .from("#proj1",.8,{autoAlpha:0,x:150,ease:Power3.easeOut})
                       .from("#proj2",.8,{autoAlpha:0,x:-150,ease:Power3.easeOut})
