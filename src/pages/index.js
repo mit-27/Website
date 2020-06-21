@@ -63,9 +63,8 @@ class index extends React.Component{
       
 
 
-        tl.to(".wall",0.5,{visibility:'visible',delay:1})
+        tl.to(".wall",0.5,{visibility:'visible'})
         .from(".mypic",1,{y:-500,autoAlpha:0,ease:Power3.easeOut})
-        // .staggerFrom(titles,0.3,{y:-20,opacity:0,ease:Back.easeOut},0.02)
         .from(".mt-lp",0.5,{autoAlpha:0,y:-100,ease:Back.easeOut})
         .staggerFrom(taglines,0.3, {scale:4, autoAlpha:0,transformOrigin:"100% 50%", ease:Back.easeOut},0.0150)
         .from(".workbtn",0.5,{autoAlpha:0,y:-100,ease:Power3.easeOut},"=-0.2");
@@ -74,7 +73,7 @@ class index extends React.Component{
 
         
     
-        t2.to(".imgcontainer",0,{visibility:'visible',delay:1})
+        t2.to(".imgcontainer",0,{visibility:'visible'})
         .from(".abouth",1,{autoAlpha:0,y:100,ease:Power3.easeOut})
         .staggerFrom(chars, 0.3, {scale:4, autoAlpha:0,  rotationX:-180,  transformOrigin:"100% 50%", ease:Back.easeOut},0.010)
         .from(".resumebtn",0.8,{autoAlpha:0,y:-100,ease:Power3.easeOut});
