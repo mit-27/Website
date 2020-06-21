@@ -44,6 +44,7 @@
     "splitting": "^1.0.6"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "prettier": "2.0.5"
   },
   "repository": {
