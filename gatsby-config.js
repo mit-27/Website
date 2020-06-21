@@ -132,6 +132,16 @@ module.exports = {
     //          trackingId: "UA-146457377-1",
     //   },
     // },
+    {
+        resolve: `gatsby-plugin-nprogress`,
+        options: {
+          // Setting a color is optional.
+          color: `blue`,
+          minimum: 0.5,
+          // Disable the loading spinner.
+          showSpinner: true,
+        },
+      },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     
@@ -156,15 +166,6 @@ module.exports = {
                 strictMath: true
             }
         },
-        {
-            resolve: `gatsby-plugin-nprogress`,
-            options: {
-              // Setting a color is optional.
-              color: `blue`,
-              
-              // Disable the loading spinner.
-              showSpinner: true,
-            },
-          },
+        
   ]
 };

@@ -70,8 +70,8 @@ class index extends React.Component{
         // .staggerFrom(captions,0.3, {scale:3, autoAlpha:0,  rotationX:-180,  transformOrigin:"50% 50%", ease:Back.easeOut},0.05)
 
         // .from(".knowmebtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut})
-        .from(".workbtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.2")
-        .to("#pbg",1,{opacity:1,ease:Power3.easeOut});
+        .from(".workbtn",0.5,{opacity:0,y:-100,ease:Power3.easeOut},"=-0.2");
+        // .to("#pbg",1,{opacity:1,ease:Power3.easeOut});
 
 
         var splitaboutp = Splitting({ target:"#pabout",by:"chars"});
@@ -134,7 +134,7 @@ class index extends React.Component{
             <Layout placeholder={true}>
                 <Waypoint/>
                 <div id="home">  
-                <div id="pbg">
+                {/* <div id="pbg">
                 <Particles
     params={{
 	    "particles": {
@@ -193,7 +193,7 @@ class index extends React.Component{
 
 
 
-                    </div>  
+                    </div>   */}
                 <SEO lang="en" title={this.props.data.site.siteMetadata.title} />
                     <div className="wall">
                     <div className="intro container">
