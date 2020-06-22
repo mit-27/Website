@@ -22,12 +22,15 @@ class index extends React.Component{
     constructor(props) {
         super(props);
         
+        
     }
+
+   
 
     componentDidMount()
     {
         
-
+     
 
         var gsap = require('gsap');
         var TimelineLite = gsap.TimelineLite;
@@ -77,12 +80,12 @@ class index extends React.Component{
                     tl.to(".wall",0.5,{visibility:'visible'})
                     .from(".mypic",1,{y:-500,autoAlpha:0,ease:Power3.easeOut})
                     .from(".mt-lp",0.5,{autoAlpha:0,y:-100,ease:Back.easeOut})
-                    .from(".tag-line",0.5, {autoAlpha:0,transformOrigin:"100% 50%", ease:Back.easeOut})
+                    .from(".tag-line",0.5, {autoAlpha:0,y:-100, ease:Back.easeOut})
                     .from(".workbtn",0.5,{autoAlpha:0,y:-100,ease:Power3.easeOut},"=-0.2");
 
                     t2.to(".imgcontainer",0,{visibility:'visible'})
         .from(".abouth",1,{autoAlpha:0,y:100,ease:Power3.easeOut})
-        .from("#pabout",1, {autoAlpha:0,y:100, ease:Power3.easeOut})
+        .from("#pabout",1, {autoAlpha:0,y:100,ease:Power3.easeOut})
         .from(".resumebtn",0.8,{autoAlpha:0,y:-100,ease:Power3.easeOut});
 
 
