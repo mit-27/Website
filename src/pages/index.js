@@ -11,7 +11,7 @@ import Portfolio from '../components/portfolio';
 import $ from "jquery"
 import { Waypoint } from 'react-waypoint'
 import Scroll from "../components/Scroll";
-// import "../style/all.min.css";
+import "../style/all.min.css";
 
 
 

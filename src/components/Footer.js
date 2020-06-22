@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import "../style/contact.less";
-import Navlinks from "./navlinks";
 import "../style/footer.less";
 import SocialLinks from "./sociallinks";
 
@@ -44,7 +43,7 @@ export default function() {
                     {new Date().getFullYear()}{". All rights reserved."}
                 </p>
             </div>
-            <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
+            
         </footer>
     );
 }
