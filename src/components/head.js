@@ -25,8 +25,10 @@ const Head = () => {
                 type="text/css"
                 href="https://cdn.jsdelivr.net/gh/akzhy/trunk/dist/trunk.min.css"
             />
-            <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
+            
             <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"></link>
+           
+
             <link
                 href="https://fonts.googleapis.com/css?family=Work+Sans:800|Poppins&display=swap"
                 rel="stylesheet"
