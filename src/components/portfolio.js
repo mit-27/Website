@@ -180,7 +180,7 @@ const Portfolio = () => {
                         <span>Data Structure & Algorithm</span>
                         
                     </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.Cryptos.cryptos" rel="noopener noreferrer" target="_blank" className="gitbtn playstorebtn">Download from Playstore <i class="fab fa-google-play"></i></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.Cryptos.cryptos" rel="noopener noreferrer" target="_blank" className="gitbtn playstorebtn">Download from Playstore <i className="itag fab fa-google-play"></i></a>
 
                 </div>
             
@@ -202,7 +202,7 @@ const Portfolio = () => {
                         <span>Ajax</span>
                         
                     </div>
-                    <a href="https://github.com/mit-27/Recruitment-Process-Management" rel="noopener noreferrer" target="_blank" className="gitbtn">View On Github   <i className="fab fa-github"></i></a>
+                    <a href="https://github.com/mit-27/Recruitment-Process-Management" rel="noopener noreferrer" target="_blank" className="gitbtn">View On Github   <i className="itag fab fa-github"></i></a>
 
                 </div>
 
@@ -226,7 +226,7 @@ const Portfolio = () => {
                         <span>Bootstrap</span>
                         
                     </div>
-                    <a href="https://github.com/mit-27/Django-Basic-Web" rel="noopener noreferrer" target="_blank" className="gitbtn">View On Github   <i className="fab fa-github"></i></a>
+                    <a href="https://github.com/mit-27/Django-Basic-Web" rel="noopener noreferrer" target="_blank" className="gitbtn">View On Github   <i className="itag fab fa-github"></i></a>
 
                 </div>
             
@@ -242,7 +242,7 @@ const Portfolio = () => {
                         <span>C</span>
                         
                     </div>
-                    <a href="https://github.com/mit-27/Quiz-Game" rel="noopener noreferrer" target="_blank" className="gitbtn">View On Github   <i className="fab fa-github"></i></a>
+                    <a href="https://github.com/mit-27/Quiz-Game" rel="noopener noreferrer" target="_blank" className="gitbtn">View On Github   <i className="itag fab fa-github"></i></a>
 
                 </div>
 
