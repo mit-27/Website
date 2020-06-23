@@ -6,8 +6,8 @@ const siteMetadata = {
   icon: `/images/icon.jpg`,
   titleImage: ``,
   introTag: `ANDROID APP DEVELOPER | WEB DEVELOPER`,
-  description: `It is a Mit Suthar Portfolio Website.`,
-  keywords: `Portfolio, Web developer, Android App Developer, gatsby`,
+  description: `Hey, I am Mit Suthar and this is my official Portfolio site`,
+  keywords: `Mit Suthar,Portfolio, Web developer, Android App Developer, gatsby`,
   aboutme : `Hello !! My name is Mit Suthar. Currently, I am pursuing my B.Tech in Computer Engineering from Computer Engineering Department of Chandubhai S Patel Institute of Technology, CHARUSAT, Anand with overall Distinction.
    I am a Android App Developer and Web developer. I love to build new stuff. I had worked with C, Python, PHP, C++, Java, C#.Net, JavaScript, jQuery, ReactJS, GatsbyJS and Unity. I've built web and 
   mobile apps. My goal is to To secure a position where I can efficiently contribute my skills and abilities to the growth of the
