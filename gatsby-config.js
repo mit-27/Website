@@ -75,12 +75,12 @@ const siteMetadata = {
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
-    // {
-    //     resolve: `gatsby-plugin-google-analytics`,
-    //       options: {
-    //          trackingId: "UA-146457377-1",
-    //   },
-    // },
+    {
+        resolve: `gatsby-plugin-google-analytics`,
+          options: {
+             trackingId: "UA-146457377-1",
+      },
+    },
     {
         resolve: `gatsby-plugin-nprogress`,
         options: {

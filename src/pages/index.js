@@ -15,7 +15,6 @@ import Scroll from "../components/Scroll";
 
 
 
-// import {Link,Element} from "react-scroll"
 
 
 class index extends React.Component{
@@ -55,13 +54,9 @@ class index extends React.Component{
 
 
 
-        // var splittitle = Splitting({target:".mt-lp",by:"chars"});
         var splittagline = Splitting({ target:".tag-line",by:"chars"});
-        // var splitcaption = Splitting({target:".caption",by:"chars"});
 
         var taglines = splittagline[0].chars;
-        // var titles = splittitle[0].chars;
-        // var captions = splitcaption[0].chars;
 
       
 
