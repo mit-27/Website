@@ -1,8 +1,8 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 // import Layout from '../components/Layout';
 // import {TimelineLite,Power3,Back} from "gsap";
 import "../style/about.less";
-import {graphql,useStaticQuery} from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 // import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 // import SEO from "../components/seo";
@@ -15,11 +15,11 @@ import "splitting/dist/splitting-cells.css";
 const About = () => {
 
     // useEffect(()=> {
-        
 
 
-       
-     
+
+
+
     //     var splitaboutp = Splitting({ target:"#pabout",by:"chars"});
     //     var chars = splitaboutp[0].chars;
     // //    console.log(splitaboutp);
@@ -36,9 +36,9 @@ const About = () => {
     //         .reverse(false)
     //         .triggerHook(0.8)
     //               .addTo(controller);
-               
+
     // });
-    
+
 
     const data = useStaticQuery(graphql`
     query {
@@ -49,52 +49,52 @@ const About = () => {
         }
     }
     `)
-    
-
-    
 
 
-    
 
-    
-    
 
-    
-    return(
-        
+
+
+
+
+
+
+
+    return (
+
 
         <div className="aboutsection" id="about" >
-            
+
 
 
             {/* <SEO lang="en" title="About" /> */}
-           <div className="container imgcontainer">
-           
-                
-               <h2   className="abouth grd-title">About Me</h2>
-               
+            <div className="container imgcontainer">
 
-               <div className="info details" id="pabout"  >
-               {data.site.siteMetadata.aboutme}
-               </div>
 
-               
-              
-           </div>
-           <div className="container" style={{paddingLeft:"15px"}}>
-           <a href="https://drive.google.com/file/d/1Of-6Lgj_YlzDOQzuTifJXjV5LFcCPsVV/view?usp=sharing" rel="noopener noreferrer" target="_blank" style={{margin:"5px 20px"}} className="col-md-6 col-sm-12 btn resumebtn">
-                            Get Resume
-                        </a>
-           </div>
-           
-        
+                <h2 className="abouth grd-title">About Me</h2>
 
-           </div> 
-          
 
-           
+                <div className="info details" id="pabout"  >
+                    {data.site.siteMetadata.aboutme}
+                </div>
 
-        
+
+
+            </div>
+            <div className="container" style={{ paddingLeft: "15px" }}>
+                <a href="https://drive.google.com/file/d/136ZumuoTkHKiXBRE3n8DXYQh_R5mdDuI/view" rel="noopener noreferrer" target="_blank" style={{ margin: "5px 20px" }} className="col-md-6 col-sm-12 btn resumebtn">
+                    Get Resume
+                </a>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
 
     );
 }
